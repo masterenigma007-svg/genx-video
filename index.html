@@ -2,22 +2,95 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gen X Night Watch</title>
+
 <style>
-html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#000;font-family:Georgia,serif}.page{position:fixed;inset:0;background:#000}.page video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}.shade{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.1),rgba(0,0,0,.55));pointer-events:none}.button-wrap{position:absolute;left:50%;bottom:8vh;transform:translateX(-50%)}.gold-button{display:inline-flex;align-items:center;justify-content:center;min-width:320px;min-height:64px;padding:16px 34px;border-radius:999px;border:2px solid #ffe087;background:linear-gradient(#ffeaa0,#efb848,#8b5b0d);color:#130900;text-decoration:none;text-transform:uppercase;letter-spacing:.09em;font-size:24px;font-weight:900;box-shadow:0 12px 32px rgba(0,0,0,.72),inset 0 2px 4px rgba(255,255,255,.55)}@media(max-width:560px){.gold-button{min-width:82vw;font-size:18px}.button-wrap{bottom:70px}}
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+}
+
+.page {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #000;
+}
+
+.page video {
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,.08), rgba(0,0,0,.55));
+  pointer-events: none;
+}
+
+.button-wrap {
+  position: absolute;
+  left: 50%;
+  bottom: 8vh;
+  transform: translateX(-50%);
+  z-index: 5;
+}
+
+.gold-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 64px;
+  padding: 16px 34px;
+  border-radius: 999px;
+  border: 2px solid #ffe087;
+  background: linear-gradient(#ffeaa0, #efb848, #8b5b0d);
+  color: #130900;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  font-size: 24px;
+  font-weight: 900;
+  font-family: Georgia, serif;
+  box-shadow: 0 12px 32px rgba(0,0,0,.72), inset 0 2px 4px rgba(255,255,255,.55);
+}
+
+@media (max-width: 560px) {
+  .gold-button {
+    min-width: 82vw;
+    font-size: 18px;
+  }
+
+  .button-wrap {
+    bottom: 70px;
+  }
+}
 </style>
 </head>
+
 <body>
 <main class="page">
-<video autoplay muted loop playsinline preload="auto">
-<source src="video.mp4" type="video/mp4">
-<source src="genx-video.mp4" type="video/mp4">
-<source src="genx-night-watch.mp4" type="video/mp4">
-<source src="assets/video.mp4" type="video/mp4">
-</video>
-<div class="shade"></div>
-<div class="button-wrap"><a class="gold-button" href="/main-menu/">Enter the Watch</a></div>
+  <video autoplay muted loop playsinline preload="auto">
+    <source src="website_lighthouse_UNIVERSAL%20USE.mp4" type="video/mp4">
+  </video>
+
+  <div class="shade"></div>
+
+  <div class="button-wrap">
+    <a class="gold-button" href="/main-menu/">Enter the Watch</a>
+  </div>
 </main>
 </body>
 </html>
