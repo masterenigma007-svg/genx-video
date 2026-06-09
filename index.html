@@ -28,51 +28,52 @@ html, body {
   inset: 0;
   width: 100vw;
   height: 100vh;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center center;
+  background: #000;
 }
 
 .shade {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,.04), rgba(0,0,0,.38));
+  background: linear-gradient(to bottom, rgba(0,0,0,.02), rgba(0,0,0,.28));
   pointer-events: none;
 }
 
 .button-wrap {
   position: absolute;
   left: 50%;
-  bottom: 4vh;
+  bottom: 3vh;
   transform: translateX(-50%);
   z-index: 5;
   opacity: 0;
-  animation: buttonFadeIn 2.8s ease 3.2s forwards;
+  animation: buttonFadeIn 2.8s ease 4.2s forwards;
 }
 
 .gold-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 150px;
-  min-height: 32px;
-  padding: 7px 16px;
+  min-width: 118px;
+  min-height: 26px;
+  padding: 5px 12px;
   border-radius: 999px;
   border: 1px solid #ffe087;
   background: linear-gradient(#ffeaa0, #efb848, #8b5b0d);
   color: #130900;
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: .08em;
-  font-size: 12px;
+  letter-spacing: .07em;
+  font-size: 10px;
   font-weight: 900;
   font-family: Georgia, serif;
-  box-shadow: 0 6px 16px rgba(0,0,0,.65), inset 0 1px 3px rgba(255,255,255,.5);
+  box-shadow: 0 4px 12px rgba(0,0,0,.62), inset 0 1px 2px rgba(255,255,255,.45);
 }
 
 @keyframes buttonFadeIn {
   from {
     opacity: 0;
-    transform: translateX(-50%) translateY(18px);
+    transform: translateX(-50%) translateY(16px);
   }
   to {
     opacity: 1;
@@ -82,14 +83,14 @@ html, body {
 
 @media (max-width: 560px) {
   .gold-button {
-    min-width: 145px;
-    font-size: 11px;
-    min-height: 30px;
-    padding: 7px 14px;
+    min-width: 112px;
+    font-size: 9px;
+    min-height: 25px;
+    padding: 5px 11px;
   }
 
   .button-wrap {
-    bottom: 36px;
+    bottom: 28px;
   }
 }
 </style>
@@ -111,8 +112,8 @@ html, body {
 <script>
 const video = document.getElementById('landingVideo');
 function slowVideo() {
-  video.playbackRate = 0.45;
-  video.defaultPlaybackRate = 0.45;
+  video.playbackRate = 0.38;
+  video.defaultPlaybackRate = 0.38;
 }
 slowVideo();
 video.addEventListener('loadedmetadata', slowVideo);
